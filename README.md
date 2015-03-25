@@ -6,7 +6,7 @@
 
 ##Usando
 
-> Incluir chamada do mixpanel no HTML
+### Incluir chamada do mixpanel no HTML
 
 ```HTML
 <script>
@@ -15,14 +15,15 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
 </script>
 ```
 
-> Incluir script initMixpanel - OBS: Lembre de colocar a sua chave do mixpanel
+### Incluir script initMixpanel - OBS: Lembre de colocar a sua chave do mixpanel
+
 ```HTML
 <script src="/js/initMixpanel.js"></script>
 ```
 
-> E por fim, registar as funções que será executadas após load mixpanel
+### E por fim, registar as funções que será executadas após load mixpanel
+
 ```HTML
-<script>
 <script>
   var foo = function() {
     console.log('foo');
@@ -30,10 +31,10 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
 
   registerMixpanel.register(foo);
 </script>
-</script>
 ```
 
 ##HTML completo
+
 ```HTML
 <!DOCTYPE html>
 <html lang="en">
