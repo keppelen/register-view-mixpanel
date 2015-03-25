@@ -9,19 +9,17 @@ mixpanel.init('c7c2c9b06ce3aabc07a4cc95d741f5fc', {
 // Listeners functions for mixpanel event view
 var listernersMixpanel = [];
 var registerMixpanel = {
-  register: function( register ) {
+  register: function() {
 
-    if ( typeof register === typeof(Function) ) {
-      listernersMixpanel.push(register);
+    if ( arguments.length > 0 ) {
+      listernersMixpanel = arguments;
     }
 
   },
   send: function() {
 
-    if ( listernersMixpanel ) {
-      for ( var i = 0; i < listernersMixpanel.length; i++ ) {
-        listernersMixpanel[i]();
-      }
+    for ( var i = 0; i < listernersMixpanel.length; i++ ) {
+      listernersMixpanel[i]();
     }
 
   }

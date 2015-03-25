@@ -16,7 +16,13 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
     console.log('foo');
   };
 
-  registerMixpanel.register(foo);
+  var bar = function() {
+    console.log('bar');
+  };
+
+  registerMixpanel.register(foo); // foo
+  registerMixpanel.register(foo, bar); // foo, bar
+  registerMixpanel.register(); // 
 </script>
 </body>
 </html>
