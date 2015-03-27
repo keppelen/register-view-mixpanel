@@ -9,10 +9,10 @@ mixpanel.init('c7c2c9b06ce3aabc07a4cc95d741f5fc', {
 // Listeners functions for mixpanel event view
 var listernersMixpanel = [];
 var registerMixpanel = {
-  register: function() {
+  register: function( fn ) {
 
-    if ( arguments.length > 0 ) {
-      listernersMixpanel = arguments;
+    if ( typeof fn === typeof(Function) ) {
+      listernersMixpanel.push(fn);
     }
 
   },
